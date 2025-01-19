@@ -1,7 +1,6 @@
 package model
 
-import "fmt"
-
+// Button is a type of widget that represents a button
 type Button struct {
 	Type    `yaml:",inline"`
 	Text    string `yaml:"text"`
@@ -25,6 +24,7 @@ func (b Button) GetType() string {
 	return "button"
 }
 
+// ButtonGroup is a type of container that holds multiple buttons
 type ButtonGroup struct {
 	Container `yaml:",inline"`
 }

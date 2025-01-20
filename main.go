@@ -24,6 +24,7 @@ func main() {
 	w.Add(l)
 	l.Add(NewLabel("Google"))
 	l.Styles = MakeStyles("is-header")
+	w.Add(NewIcon("fas fa-home"))
 
 	// Convert the struct to JSON
 	jsonData, err := yaml.Marshal(w)

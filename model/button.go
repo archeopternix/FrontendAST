@@ -1,5 +1,26 @@
 package model
 
+// Icon represents an Icon fase on font awesome icons
+type Icon struct {
+	Name string `yaml:"name"`
+	Type `yaml:",inline"`
+}
+
+func NewIcon(name string) *Icon {
+	return &Icon{
+		Name: name,
+		Type: NewType("icon"),
+	}
+}
+
+func (i Icon) GetName() string {
+	return i.Name
+}
+
+func (i Icon) GetHTML(level int) string {
+	return "<i class=\"" + i.Name + "\"></i>"
+}
+
 // Button is a type of widget that represents a button
 type Button struct {
 	Type    `yaml:",inline"`
